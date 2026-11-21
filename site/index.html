@@ -1,26 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BestGames</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101111">
+    <meta name="description" content="Новинки и популярные компьютерные игры в каталоге BestGames.">
+    <title>BestGames — каталог компьютерных игр</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="site-header">
-    <a class="site-header__brand" href="index.html">BestGames</a>
+    <a class="skip-link button button--primary" href="#main">К содержанию</a>
+    <header class="site-header container" id="top">
+        <a class="brand" href="#top">BestGames</a>
+        <nav class="site-header__nav" aria-label="Основное меню">
+            <a href="#main">Главная</a>
+        </nav>
+        <details class="mobile-menu">
+            <summary>Меню</summary>
+            <nav aria-label="Основное меню">
+                <a href="#main">Главная</a>
+            </nav>
+        </details>
+    </header>
 
-    <nav class="site-header__nav" aria-label="Основное меню">
-        <a href="#search">Поиск</a>
-        <a href="/catalog.html">Каталог игр</a>
-        <a href="/profile.html">Личный кабинет</a>
-        <a class="site-header__login" href="/login.html">Войти</a>
-    </nav>
-</header>
-
-    <main>
+    <main class="container" id="main" tabindex="-1">
         <h1>BestGames</h1>
         <p>Каталог компьютерных игр</p>
     </main>
