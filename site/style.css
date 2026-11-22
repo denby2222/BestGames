@@ -364,3 +364,189 @@ select {
         font-size: 0.8rem;
     }
 }
+
+/* Поиск и популярные игры */
+.section-title {
+    margin: 0 0 22px;
+    font-size: clamp(1.6rem, 3.2vw, 2.35rem);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+}
+
+.genre-filter {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr) auto;
+    align-items: center;
+    gap: 14px;
+    margin: 30px 0 clamp(32px, 4.6vw, 60px);
+}
+
+.genre-filter label {
+    font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+    font-weight: 750;
+}
+
+.genre-filter select,
+.genre-filter .button {
+    min-height: 49px;
+}
+
+.genre-filter select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 0;
+    background: var(--panel);
+    color: var(--text);
+}
+
+.games-section {
+    scroll-margin-block-start: 20px;
+    margin-bottom: clamp(32px, 4.6vw, 60px);
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: 1.2fr repeat(2, minmax(0, 1fr));
+    gap: 16px 24px;
+}
+
+.game-card {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-content: start;
+    gap: 12px 14px;
+    padding-block: 12px;
+    border-block: 1px solid var(--border);
+}
+
+.game-card--featured {
+    grid-row: span 2;
+    grid-template-columns: 1fr;
+    padding: 0 0 12px;
+    border-top: 0;
+}
+
+.game-card__image {
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+}
+
+.game-card--featured .game-card__image {
+    aspect-ratio: 16 / 9;
+}
+
+.game-card h3 {
+    margin: 0 0 4px;
+    font-size: clamp(1rem, 1.45vw, 1.2rem);
+    line-height: 1.2;
+}
+
+.game-card--featured h3 {
+    font-size: clamp(1.2rem, 2vw, 1.65rem);
+}
+
+.game-card__meta {
+    margin: 0 0 4px;
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+
+.game-card__studio {
+    display: block;
+}
+
+.game-card--featured .game-card__studio {
+    display: inline;
+}
+
+.game-card--featured .game-card__studio::before {
+    content: " · ";
+}
+
+.game-card__reviews {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin: 6px 0 0;
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.game-card__stars {
+    background: linear-gradient(90deg, var(--accent) var(--positive), #858985 var(--positive));
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 0.04em;
+}
+
+.game-card__actions {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.game-card__price {
+    font-size: 1.15rem;
+    font-weight: 750;
+}
+
+.game-card .button {
+    min-height: 36px;
+    padding-inline: 16px;
+}
+
+main:has(#genre option[value]:checked:not([value="all"])) .game-card {
+    display: none;
+}
+
+main:has(#genre option[value="rpg"]:checked) [data-genre="rpg"],
+main:has(#genre option[value="sandbox"]:checked) [data-genre="sandbox"],
+main:has(#genre option[value="farm"]:checked) [data-genre="farm"],
+main:has(#genre option[value="simulation"]:checked) [data-genre="simulation"],
+main:has(#genre option[value="metroidvania"]:checked) [data-genre="metroidvania"] {
+    display: grid;
+}
+
+main:has(#genre option[value]:checked:not([value="all"])) .game-grid {
+    grid-template-columns: minmax(0, 450px);
+}
+
+@media (max-width: 980px) {
+    .game-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .game-card--featured {
+        grid-row: auto;
+        grid-column: 1 / -1;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        align-items: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .genre-filter {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+    }
+
+    .genre-filter .button {
+        justify-self: start;
+    }
+
+    .game-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .game-card--featured {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

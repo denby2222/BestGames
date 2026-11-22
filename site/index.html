@@ -14,12 +14,16 @@
     <header class="site-header container" id="top">
         <a class="brand" href="#top">BestGames</a>
         <nav class="site-header__nav" aria-label="Основное меню">
-            <a href="#new">Главная</a>
+            <a href="#new">Новинки</a>
+            <a href="#search">Поиск</a>
+            <a href="#games" class="button">К играм</a>
         </nav>
         <details class="mobile-menu">
             <summary>Меню</summary>
             <nav aria-label="Основное меню">
                 <a href="#new">Новинки</a>
+                <a href="#search">Поиск</a>
+                <a href="#games">К играм</a>
             </nav>
         </details>
     </header>
@@ -91,6 +95,109 @@
                         </span>
                     </label>
                 </div>
+            </div>
+        </section>
+
+        <div class="genre-filter" id="search">
+            <label for="genre">Поиск по жанрам</label>
+            <select id="genre" name="genre">
+                <option value="all">Все жанры</option>
+                <option value="rpg">Ролевая игра</option>
+                <option value="sandbox">Песочница</option>
+                <option value="farm">Симулятор фермы</option>
+                <option value="simulation">Автосимулятор</option>
+                <option value="metroidvania">Метроидвания</option>
+            </select>
+            <a class="button button--primary" href="#games">К результатам</a>
+        </div>
+
+        <section class="games-section" id="games" aria-labelledby="games-title">
+            <h2 class="section-title" id="games-title">Популярные игры</h2>
+            <div class="game-grid">
+                <article class="game-card game-card--featured" data-genre="rpg">
+                    <img class="game-card__image" src="images/elden-ring.jpg" alt="" loading="lazy">
+                    <div>
+                        <h3>ELDEN RING</h3>
+                        <p class="game-card__meta">Ролевая игра<span class="game-card__studio">FromSoftware</span></p>
+                        <p class="game-card__reviews">
+                            <span class="game-card__stars" style="--positive: 94%" aria-hidden="true">★★★★★</span>
+                            <span>94%<span class="visually-hidden"> положительных отзывов в Steam</span></span>
+                        </p>
+                    </div>
+                    <div class="game-card__actions">
+                        <span class="game-card__price">$59.99</span>
+                        <a class="button" href="https://store.steampowered.com/app/1245620/"
+                            aria-label="ELDEN RING в Steam">В Steam</a>
+                    </div>
+                </article>
+
+                <article class="game-card" data-genre="sandbox">
+                    <img class="game-card__image" src="images/terraria.jpg" alt="" loading="lazy">
+                    <div>
+                        <h3>Terraria</h3>
+                        <p class="game-card__meta">Песочница<span class="game-card__studio">Re-Logic</span></p>
+                        <p class="game-card__reviews">
+                            <span class="game-card__stars" style="--positive: 97%" aria-hidden="true">★★★★★</span>
+                            <span>97%<span class="visually-hidden"> положительных отзывов в Steam</span></span>
+                        </p>
+                    </div>
+                    <div class="game-card__actions">
+                        <span class="game-card__price">$9.99</span>
+                        <a class="button" href="https://store.steampowered.com/app/105600/"
+                            aria-label="Terraria в Steam">В Steam</a>
+                    </div>
+                </article>
+
+                <article class="game-card" data-genre="farm">
+                    <img class="game-card__image" src="images/stardew-valley.jpg" alt="" loading="lazy">
+                    <div>
+                        <h3>Stardew Valley</h3>
+                        <p class="game-card__meta">Симулятор фермы<span class="game-card__studio">ConcernedApe</span></p>
+                        <p class="game-card__reviews">
+                            <span class="game-card__stars" style="--positive: 98%" aria-hidden="true">★★★★★</span>
+                            <span>98%<span class="visually-hidden"> положительных отзывов в Steam</span></span>
+                        </p>
+                    </div>
+                    <div class="game-card__actions">
+                        <span class="game-card__price">$14.99</span>
+                        <a class="button" href="https://store.steampowered.com/app/413150/"
+                            aria-label="Stardew Valley в Steam">В Steam</a>
+                    </div>
+                </article>
+
+                <article class="game-card" data-genre="simulation">
+                    <img class="game-card__image" src="images/euro-truck.jpg" alt="" loading="lazy">
+                    <div>
+                        <h3>Euro Truck Simulator 2</h3>
+                        <p class="game-card__meta">Автосимулятор<span class="game-card__studio">SCS Software</span></p>
+                        <p class="game-card__reviews">
+                            <span class="game-card__stars" style="--positive: 97%" aria-hidden="true">★★★★★</span>
+                            <span>97%<span class="visually-hidden"> положительных отзывов в Steam</span></span>
+                        </p>
+                    </div>
+                    <div class="game-card__actions">
+                        <span class="game-card__price">$4.99</span>
+                        <a class="button" href="https://store.steampowered.com/app/227300/"
+                            aria-label="Euro Truck Simulator 2 в Steam">В Steam</a>
+                    </div>
+                </article>
+
+                <article class="game-card" data-genre="metroidvania">
+                    <img class="game-card__image" src="images/silksong.jpg" alt="" loading="lazy">
+                    <div>
+                        <h3>Hollow Knight: Silksong</h3>
+                        <p class="game-card__meta">Метроидвания<span class="game-card__studio">Team Cherry</span></p>
+                        <p class="game-card__reviews">
+                            <span class="game-card__stars" style="--positive: 93%" aria-hidden="true">★★★★★</span>
+                            <span>93%<span class="visually-hidden"> положительных отзывов в Steam</span></span>
+                        </p>
+                    </div>
+                    <div class="game-card__actions">
+                        <span class="game-card__price">$19.99</span>
+                        <a class="button" href="https://store.steampowered.com/app/1030300/"
+                            aria-label="Hollow Knight: Silksong в Steam">В Steam</a>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
