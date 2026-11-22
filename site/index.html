@@ -14,19 +14,85 @@
     <header class="site-header container" id="top">
         <a class="brand" href="#top">BestGames</a>
         <nav class="site-header__nav" aria-label="Основное меню">
-            <a href="#main">Главная</a>
+            <a href="#new">Главная</a>
         </nav>
         <details class="mobile-menu">
             <summary>Меню</summary>
             <nav aria-label="Основное меню">
-                <a href="#main">Главная</a>
+                <a href="#new">Новинки</a>
             </nav>
         </details>
     </header>
 
     <main class="container" id="main" tabindex="-1">
-        <h1>BestGames</h1>
-        <p>Каталог компьютерных игр</p>
+        <h1 class="visually-hidden">BestGames — каталог компьютерных игр</h1>
+
+        <section class="slider" id="new" aria-label="Новинки">
+            <div role="radiogroup" aria-label="Выбор новинки">
+                <input class="visually-hidden" type="radio" name="news" id="slide-forza" checked>
+                <input class="visually-hidden" type="radio" name="news" id="slide-silksong">
+                <input class="visually-hidden" type="radio" name="news" id="slide-hades">
+
+                <div class="slider__slides">
+                    <article class="hero hero--forza">
+                        <img class="hero__image" src="images/forza.jpg" alt="Спорткары на ночной улице в Forza Horizon 6" fetchpriority="high">
+                        <div class="hero__content">
+                            <p class="hero__label">Новинки</p>
+                            <h2>Forza Horizon 6</h2>
+                            <p class="hero__description">Гонки по открытому миру Японии</p>
+                            <p class="hero__price">$52.49 <s><span class="visually-hidden">Цена до скидки </span>$69.99</s></p>
+                            <a class="button button--primary" href="https://store.steampowered.com/app/2483190/">Подробнее в Steam</a>
+                        </div>
+                    </article>
+
+                    <article class="hero hero--silksong">
+                        <img class="hero__image" src="images/silksong.jpg" alt="Хорнет в пещере из Hollow Knight: Silksong" loading="lazy">
+                        <div class="hero__content">
+                            <p class="hero__label">Новинки</p>
+                            <h2>Hollow Knight: Silksong</h2>
+                            <p class="hero__description">Путешествие Хорнет по королевству Фарлум</p>
+                            <p class="hero__price">$19.99</p>
+                            <a class="button button--primary" href="https://store.steampowered.com/app/1030300/">Подробнее в Steam</a>
+                        </div>
+                    </article>
+
+                    <article class="hero hero--hades">
+                        <img class="hero__image" src="images/hades.jpg" alt="Сцена боя в Hades II" loading="lazy">
+                        <div class="hero__content">
+                            <p class="hero__label">Новинки</p>
+                            <h2>Hades II</h2>
+                            <p class="hero__description">Мелиноя бросает вызов титану времени</p>
+                            <p class="hero__price">$29.99</p>
+                            <a class="button button--primary" href="https://store.steampowered.com/app/1145350/">Подробнее в Steam</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="slider__controls">
+                    <label class="slider__option" for="slide-forza">
+                        <img src="images/forza-thumb.jpg" alt="" width="136" height="86">
+                        <span>
+                            <strong>Forza Horizon 6</strong>
+                            <small>$52.49</small>
+                        </span>
+                    </label>
+                    <label class="slider__option" for="slide-silksong">
+                        <img src="images/silksong-thumb.jpg" alt="" width="136" height="86">
+                        <span>
+                            <strong>Hollow Knight: Silksong</strong>
+                            <small>$19.99</small>
+                        </span>
+                    </label>
+                    <label class="slider__option" for="slide-hades">
+                        <img src="images/hades-thumb.jpg" alt="" width="136" height="86">
+                        <span>
+                            <strong>Hades II</strong>
+                            <small>$29.99</small>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
