@@ -16,6 +16,7 @@
         <nav class="site-header__nav" aria-label="Основное меню">
             <a href="#new">Новинки</a>
             <a href="#search">Поиск</a>
+            <a href="#benefits">Преимущества</a>
             <a href="#games" class="button">К играм</a>
         </nav>
         <details class="mobile-menu">
@@ -23,6 +24,7 @@
             <nav aria-label="Основное меню">
                 <a href="#new">Новинки</a>
                 <a href="#search">Поиск</a>
+                <a href="#benefits">Преимущества</a>
                 <a href="#games">К играм</a>
             </nav>
         </details>
@@ -110,6 +112,40 @@
             </select>
             <a class="button button--primary" href="#games">К результатам</a>
         </div>
+
+        <section class="benefits" id="benefits" aria-labelledby="benefits-title">
+            <h2 class="section-title" id="benefits-title">Преимущества</h2>
+            <ul class="benefits__list">
+                <li class="benefit">
+                    <img src="images/prices.jpg" alt="" width="380" height="210" loading="lazy">
+                    <div>
+                        <h3>Привлекательные цены</h3>
+                        <p>Сравнивайте цены и скидки на игры в подборке.</p>
+                    </div>
+                </li>
+                <li class="benefit">
+                    <img src="images/calendar.jpg" alt="" width="380" height="210" loading="lazy">
+                    <div>
+                        <h3>Ежемесячные акции</h3>
+                        <p>Скидки и сроки акций указаны на страницах игр в Steam.</p>
+                    </div>
+                </li>
+                <li class="benefit">
+                    <img src="images/support.jpg" alt="" width="380" height="210" loading="lazy">
+                    <div>
+                        <h3>Круглосуточная поддержка</h3>
+                        <p>Почта и номер телефона указаны внизу страницы.</p>
+                    </div>
+                </li>
+                <li class="benefit">
+                    <img src="images/checkout.jpg" alt="" width="380" height="210" loading="lazy">
+                    <div>
+                        <h3>Быстрая покупка</h3>
+                        <p>Откройте страницу игры в Steam, чтобы купить её.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
         <section class="games-section" id="games" aria-labelledby="games-title">
             <h2 class="section-title" id="games-title">Популярные игры</h2>
@@ -200,6 +236,51 @@
                 </article>
             </div>
         </section>
+
+        <section class="partners" id="partners" aria-labelledby="partners-title">
+            <h2 class="section-title" id="partners-title">Наши партнёры</h2>
+        </section>
     </main>
+
+    <footer class="site-footer" id="contacts">
+        <div class="container">
+            <div class="site-footer__layout">
+                <div>
+                    <a class="brand" href="#top">BestGames</a>
+                    <p>Каталог компьютерных игр</p>
+                </div>
+
+                <div>
+                    <h2>Контакты</h2>
+                    <ul>
+                        <li><a href="tel:+78009995599">8-800-999-55-99</a></li>
+                        <li><a href="mailto:best@games.ru">best@games.ru</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2>Покупателям</h2>
+                    <ul>
+                        <li><a href="#benefits">Преимущества</a></li>
+                        <li><a href="#partners">Партнёры</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2>Навигация</h2>
+                    <ul>
+                        <li><a href="#top">Главная</a></li>
+                        <li><a href="#search">Поиск по жанрам</a></li>
+                        <li><a href="#games">Популярные игры</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="site-footer__source">
+                Steam (США), цены в USD и доля положительных англоязычных отзывов.
+                Данные на <time datetime="2026-11-21">21 ноября 2026 года</time>.
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
